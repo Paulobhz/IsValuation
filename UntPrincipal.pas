@@ -46,6 +46,8 @@ type
     procedure edtFluxoExit(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
+    procedure edtFluxoKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -72,6 +74,24 @@ begin
   if (Fluxo>0)and(Crescimento>0)and(Taxa>0) then
     Valuation := Fluxo/((Taxa-Crescimento)/100);
   LblValuation.Text := FormatFloat('#,##0.00',Valuation);
+
+end;
+
+procedure TFrmPrincipal.edtFluxoKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+Var Fluxo,Crescimento,Taxa, Valuation : double;
+begin
+  Fluxo :=0.0;
+  Crescimento :=0.0;
+  Taxa :=0.0;
+  Valuation  :=0.0;
+  if edtFluxo.Text<>''       then Fluxo       := StrToFloat(edtFluxo.Text);
+  if edtCrescimento.Text<>'' then Crescimento := StrToFloat(edtCrescimento.Text);
+  if edtTaxa.Text<>''        then Taxa        := StrToFloat(edtTaxa.Text);
+  if (Fluxo>0)and(Crescimento>0)and(Taxa>0) then
+    Valuation := Fluxo/((Taxa-Crescimento)/100);
+  LblValuation.Text := FormatFloat('#,##0.00',Valuation);
+
 
 end;
 

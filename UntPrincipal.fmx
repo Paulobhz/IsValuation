@@ -6396,7 +6396,7 @@ object FrmPrincipal: TFrmPrincipal
         TextSettings.HorzAlign = Center
         Text = 'InnerSoft'
         TabOrder = 0
-        Url = 'MailTo:is.consultoriabh2020@gmail.com'
+        Url = 'https://www.facebook.com/InnerSoft-Tecnologia-105977787756929/'
       end
     end
     object lytBotton: TLayout
@@ -11995,6 +11995,7 @@ object FrmPrincipal: TFrmPrincipal
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         StyledSettings = [Family]
+        OnKeyDown = edtFluxoKeyDown
         OnExit = edtFluxoExit
       end
       object Label2: TLabel
@@ -12033,6 +12034,7 @@ object FrmPrincipal: TFrmPrincipal
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         StyledSettings = [Family]
+        OnKeyDown = edtFluxoKeyDown
         OnExit = edtFluxoExit
       end
       object edtTaxa: TEdit
@@ -12053,6 +12055,7 @@ object FrmPrincipal: TFrmPrincipal
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         StyledSettings = [Family]
+        OnKeyDown = edtFluxoKeyDown
         OnExit = edtFluxoExit
       end
       object Label3: TLabel
